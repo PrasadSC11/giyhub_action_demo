@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EmployeeRepo extends JpaRepository<Employeess, Long> {
 
-	// Parameterized query to prevent SQL injection
-	@Query("SELECT e FROM Employeess e WHERE e.username = :username AND e.password = :password")
-	Employeess findByUsernameAndPassword(String username, String password);
+    // Parameterized query to prevent SQL injection
+    @Query("SELECT e FROM Employeess e WHERE e.username = :username AND e.password = :password")
+    Employeess findByUsernameAndPassword(String username, String password);
 }
